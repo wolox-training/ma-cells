@@ -38,15 +38,21 @@ export default css`
 
   .title-book {
     color: black;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     margin: 12px 0 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .author {
     color: #828282;
-    font-size: 11px;
+    font-size: 14px;
     margin-bottom: 23px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .card:hover {
