@@ -1,65 +1,55 @@
-import { css } from 'lit-element';
+import { css } from "lit";
 
 export default css`
-.container-book-list {
+  .container-book-list {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2% 10%;
+  }
 
-    background-color: $light-gray;
+  .container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto 140px;
+  }
+  .card {
+    height: 300px;
+    width: 198px;
+    background-color: white;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    margin: 18px;
+  }
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;
-        background-color: $white;
-        box-shadow: 0 4px 10px 0 rgb(0 0 0 / 50%);
-        padding: 0 270px;
-        border-top: 6px solid $blue;
-        position: static;
-        margin-bottom: 18px;
+  .image {
+    margin: 28px 28px 0;
+  }
 
-        .logout {
-            font-size: 18px;
-        }
-    }
+  .text {
+    margin: 0 28px;
+  }
 
-    .container-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: auto 140px;
+  .img-book {
+    height: 200px;
+    width: 142px;
+  }
 
-        .card {
-            height: 300px;
-            width: 198px;
-            background-color: $white;
-            box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
-            margin: 18px;
-            padding: 28px 28px 72px 28px;
-            display: flex;
-            flex-wrap: wrap;
+  .title-book {
+    color: black;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 12px 0 8px 0;
+  }
 
-            .img-book {
-                height: 200px;
-                width: 142px;
-            }
+  .author {
+    color: #828282;
+    font-size: 11px;
+    margin-bottom: 23px;
+  }
 
-            .title-book {
-                color: $black;
-                font-size: 16px;
-                font-weight: 700;
-                margin: 12px 0 8px 0;
-            }
-
-            .author {
-                color: $gray;
-                font-size: 14px;
-                margin-bottom: 23px;
-            }
-        }
-
-        .card:hover {
-            transform: scale(1.1);
-        }
-    }
-}
-`
+  .card:hover {
+    transform: scale(1.1);
+  }
+`;

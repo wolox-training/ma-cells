@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../am-maquetado/maquetado"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ma-cells"
+	}
+}
