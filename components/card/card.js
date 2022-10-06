@@ -6,26 +6,29 @@ class CardComponent extends LitElement {
     return [styles];
   }
 
+  static get properties() {
+    return {
+      item: { type: Object },
+    };
+  }
+
+  constructor() {
+    super();
+    this.item = {
+      author: "Título del libro",
+      book_title: "Nombre del autor",
+      img: "",
+    };
+  }
+
   render() {
     return html`
-      <div class="container-book-list">
-        ${this.data.map(
-          (item) => html`
-            <div class="card">
-              <div class="image">
-                <img
-                  class="img-book"
-                  src="${item.img}"
-                  alt="img-book"
-                />
-              </div>
-              <div class="text">
-                <h3 class="title-book">${item.book_title}</h3>
-                <span class="author">${item.author}</span>
-              </div>
-            </div>
-          `
-        )}
+      <div class="image">
+        <img class="img-book" src="${this.item.img}" alt="img-book" />
+      </div>
+      <div class="text">
+        <h3 class="title-book">${this.item.book_title}</h3>
+        <span class="author">${this.item.author}</span>
       </div>
     `;
   }
