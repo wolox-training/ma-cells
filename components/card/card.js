@@ -16,7 +16,7 @@ class CardComponent extends LitElement {
               <div class="image">
                 <img
                   class="img-book"
-                  src="./assets/book-cover.png"
+                  src="${item.img}"
                   alt="img-book"
                 />
               </div>
