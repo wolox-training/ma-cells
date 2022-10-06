@@ -1,6 +1,5 @@
 ##System
 package-lock.json
-package.json
 
 ##directory
 node_modules/*
