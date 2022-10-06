@@ -7,7 +7,6 @@ class CardComponent extends LitElement {
   }
 
   render() {
-    console.log(this.data);
     return html`
       <div class="container-book-list">
         ${this.data.map(
