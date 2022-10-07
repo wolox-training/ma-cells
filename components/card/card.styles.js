@@ -36,17 +36,11 @@ export default css`
     font-size: 16px;
     font-weight: 700;
     margin: 0 0 2px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 
   .author {
     color: #828282;
     font-size: 14px;
     margin-bottom: 23px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
   }
 `;
