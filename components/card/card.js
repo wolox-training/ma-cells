@@ -23,12 +23,14 @@ class CardComponent extends LitElement {
 
   render() {
     return html`
-      <div class="image">
-        <img class="img-book" src="${this.item.img}" alt="img-book" />
-      </div>
-      <div class="text">
-        <h3 class="title-book">${this.item.book_title}</h3>
-        <span class="author">${this.item.author}</span>
+      <div class="card">
+        <div class="image">
+          <img class="img-book" src="${this.item.img}" alt="img-book" />
+        </div>
+        <div class="text">
+          <h3 class="title-book">${this.item.book_title}</h3>
+          <span class="author">${this.item.author}</span>
+        </div>
       </div>
     `;
   }

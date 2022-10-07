@@ -11,11 +11,7 @@ class BookListComponent extends LitElement {
     return html`
       <div class="container-book-list">
         ${this.data.map(
-          (item) => html`
-            <div class="card">
-              <card-component .item=${item}></card-component>
-            </div>
-          `
+          (item) => html` <card-component .item=${item}></card-component> `
         )}
       </div>
     `;

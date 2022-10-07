@@ -1,8 +1,25 @@
 import { css } from "lit";
 
 export default css`
+
+  .card {
+    height: 300px;
+    width: 198px;
+    background-color: white;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
+    margin: 18px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+  }
+
   .image {
     margin: 28px 28px 0;
+    height: 200px;
+    width: 142px;
   }
 
   .text {
@@ -18,7 +35,7 @@ export default css`
     color: black;
     font-size: 16px;
     font-weight: 700;
-    margin: 12px 0 8px 0;
+    margin: 0 0 2px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
