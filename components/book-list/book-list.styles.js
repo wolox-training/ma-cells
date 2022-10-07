@@ -6,5 +6,6 @@ export default css`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    padding: 2% 10%;
   }
 `;
