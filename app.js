@@ -1,11 +1,12 @@
 import { LitElement, html } from "lit";
-import "./components/book-list/book-list";
-import data from './api/api.json' assert { type: "json" };
+import "./views/book-list/book-list";
+import "./views/book-detail/book-detail";
+import data from "./api/api.json" assert { type: "json" };
 
 class AppComp extends LitElement {
 
   render() {
-    return html` <book-list-component .data=${data}></book-list-component> `;
+    return html` <book-list-view .data=${data}></book-list-view> `;
   }
 }
 
