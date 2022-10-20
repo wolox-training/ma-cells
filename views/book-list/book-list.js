@@ -7,15 +7,35 @@ class BookListView extends LitElement {
     return [styles];
   }
 
-  onNavigate = (pathName) => {
-    window.history.pushState({}, pathName, window.location.origin + pathName)
+  static get properties() {
+    return {
+      item: { type: Object },
+    };
+  }
+
+  constructor() {
+    super();
+    this.item = [];
+  }
+
+  onClick(item) {
+    let event = new CustomEvent("book-clicked", {
+      detail: item.title,
+    });
+    this.dispatchEvent(event);
   }
 
   render() {
     return html`
       <div class="container-book-list">
         ${this.data.map(
-          (item) => html` <card-component @click=${()=>this.onNavigate('/book-detail')} .item=${item}></card-component> `
+          (item) =>
+            html`
+              <card-component
+                @click=${() => this.onClick(item)}
+                .item=${item}
+              ></card-component>
+            `
         )}
       </div>
     `;
