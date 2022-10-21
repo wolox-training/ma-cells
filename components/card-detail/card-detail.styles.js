@@ -3,13 +3,12 @@ import { css } from "lit";
 export default css`
   .container-card {
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 20px auto;
     width: 900px;
+    height: 416px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgb(0 0 0 / 50%) 4px 4px 10px 0px;
-    padding: 20px;
+    padding: 0 20px;
   }
 
   @media (max-width: 1024px) {
@@ -20,63 +19,39 @@ export default css`
       padding: 0px;
       margin: 0;
       padding: 20px 0px;
-    }
-
-    .title {
-      font-size: 24px;
-    }
-
-    .genre {
-      font-size: 16px !important;
-    }
-
-    .container-image {
-      justify-self: center;
-      width: auto !important;
-    }
-
-    .badge {
-      width: 30%;
-      left: 165px !important;
-      bottom: 240px !important;
-    }
-
-    .container-detail {
-      width: auto !important;
-    }
-
-    .img-book {
-      width: 212px !important;
-      height: 298px !important;
-    }
-
-    .imgAndDescrition {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: center;
-      width: auto;
-    }
-
-    .subtitle {
-      font-size: 14px;
-    }
-
-    .text {
-      font-size: 14px;
-    }
-
-    .name-author {
-      font-size: 14px;
+      align-items: center;
     }
   }
 
+  .imgAndDescrition {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
+
+  .name-author {
+    font-size: 14px;
+  }
+
+  ///////////////////////////////////////////////////////
   .genre {
     color: #828282;
     font-size: 24px;
     font-weight: 700;
     justify-self: center;
     margin-left: 2%;
+  }
+
+  @media (max-width: 1024px) {
+    .genre {
+      font-size: 16px;
+      font-weight: bold;
+
+      color: #828282;
+    }
   }
 
   .border {
@@ -93,13 +68,28 @@ export default css`
   .container-image {
     position: relative;
     width: 35%;
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .container-image {
+      justify-self: center;
+      width: auto;
+    }
   }
 
   .title {
-    font-size: 24px;
+    font-size: 32px;
     font-weight: bold;
     display: grid;
     justify-self: center;
+  }
+
+  @media (max-width: 1024px) {
+    .title {
+      font-size: 24px;
+    }
   }
 
   .badge {
@@ -108,6 +98,14 @@ export default css`
     bottom: 275px;
     animation-duration: 1s;
     animation-name: slidein;
+  }
+
+  @media (max-width: 1024px) {
+    .badge {
+      width: 30%;
+      left: 165px;
+      bottom: 240px;
+    }
   }
 
   @keyframes slidein {
@@ -127,8 +125,21 @@ export default css`
     height: 368px;
   }
 
+  @media (max-width: 1024px) {
+    .img-book {
+      width: 212px;
+      height: 298px;
+    }
+  }
+
   .container-detail {
     width: 65%;
+  }
+
+  @media (max-width: 1024px) {
+    .container-detail {
+      width: 90%;
+    }
   }
 
   .title-book {
@@ -143,10 +154,22 @@ export default css`
     margin: 3% 0;
   }
 
+  @media (max-width: 1024px) {
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+
   .text {
     margin-left: 8px;
     font-size: 20px;
     color: #828282;
+  }
+
+  @media (max-width: 1024px) {
+    .text {
+      font-size: 14px;
+    }
   }
 
   .title-card {
@@ -174,24 +197,5 @@ export default css`
   .year {
     display: flex;
     align-items: center;
-  }
-
-  /////////////////////////////////////////// Media query ////////////////////////////////////
-  @media screen and (max-width: 1024px) {
-    .container {
-      background-color: blueviolet;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-    }
-
-    .container-back-arrow {
-      background-color: tan;
-      justify-content: center;
-    }
-
-    .container-card {
-      background-color: paleturquoise;
-    }
   }
 `;

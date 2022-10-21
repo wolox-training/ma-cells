@@ -6,7 +6,8 @@ export default css`
     align-items: center;
     cursor: pointer;
     padding-top: 50px;
-    margin: 5% 17%;
+    margin-right: 61%;
+    margin-bottom: 5%;
   }
 
   .back {
