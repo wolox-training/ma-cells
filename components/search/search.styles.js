@@ -27,4 +27,10 @@ export default css`
     height: 24px;
     width: 24px;
   }
+
+  @media (max-width: 1024px) {
+    .container-search {
+      width: auto;
+    }
+  }
 `;

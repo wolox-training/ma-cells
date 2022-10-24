@@ -13,7 +13,14 @@ export default css`
     position: static;
     margin-bottom: 3%;
   }
-  
+
+  @media (max-width: 1024px) {
+    .navbar {
+      justify-content: space-around;
+      padding: 0;
+    }
+  }
+
   .logout {
     font-size: 18px;
   }

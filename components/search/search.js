@@ -14,13 +14,8 @@ class SearchComponent extends LitElement {
           placeholder="Buscar por título del libro..."
           type="text"
         />
-        <input
-          class="search-buttom"
-          title="search-buttom"
-          alt="icon"
-          src="../../assets/icon.png"
-          type="image"
-        />
+
+        <img alt="icon" src="../../assets/icon.png" />
       </div>
     `;
   }
