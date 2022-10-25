@@ -11,13 +11,13 @@ class BookListView extends LitElement {
 
   static get properties() {
     return {
-      item: { type: Object },
+      data: { type: Object },
     };
   }
 
   constructor() {
     super();
-    this.item = [];
+    this.data = [];
   }
 
   onClick(item) {
@@ -32,6 +32,10 @@ class BookListView extends LitElement {
     window.history.pushState({}, "", this.path);
   }
 
+  onKeyup({ detail }) {
+    this.data = detail;
+  }
+
   render() {
     return html`
       <div class="container">
@@ -40,7 +44,10 @@ class BookListView extends LitElement {
           @bootom-logout=${this.bottonLogout}
         ></header-component>
         <div>
-          <search-component .item=${this.data}></search-component>
+          <search-component
+            @search-keyup=${this.onKeyup}
+            .item=${this.data}
+          ></search-component>
           <div class="container-book-list">
             ${this.data.map(
               (item) =>

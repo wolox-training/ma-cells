@@ -36,7 +36,6 @@ export default css`
     font-size: 14px;
   }
 
-  ///////////////////////////////////////////////////////
   .genre {
     color: #828282;
     font-size: 24px;
@@ -95,7 +94,7 @@ export default css`
   .badge {
     position: absolute;
     left: 200px;
-    bottom: 275px;
+    bottom: 300px;
     animation-duration: 1s;
     animation-name: slidein;
   }

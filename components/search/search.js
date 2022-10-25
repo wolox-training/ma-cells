@@ -9,6 +9,7 @@ class SearchComponent extends LitElement {
   static get properties() {
     return {
       item: { type: Object },
+      itemCopy: { type: Object },
     };
   }
 
@@ -28,7 +29,14 @@ class SearchComponent extends LitElement {
     } else {
       this.item = this.itemCopy;
     }
-    console.log(this.item);
+    this.onKeyup();
+  }
+
+  onKeyup() {
+    let event = new CustomEvent("search-keyup", {
+      detail: this.item,
+    });
+    this.dispatchEvent(event);
   }
 
   render() {
@@ -41,7 +49,7 @@ class SearchComponent extends LitElement {
           id="search"
           @keyup=${this.handleChange}
         />
-        <button id="icon-button" @click=${this.handleChange}>
+        <button id="icon-button" @click=${this.onKeyup}>
           <img alt="icon" src="../../assets/icon.png" />
         </button>
       </div>

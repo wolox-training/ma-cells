@@ -28,6 +28,11 @@ export default css`
     width: 24px;
   }
 
+  #icon-button {
+    background-color: transparent;
+    border: none;
+  }
+
   @media (max-width: 1024px) {
     .container-search {
       width: auto;
