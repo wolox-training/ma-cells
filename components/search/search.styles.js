@@ -23,7 +23,7 @@ export default css`
     color: rgb(130, 130, 130);
   }
 
-  .search-buttom {
+  .search-button {
     height: 24px;
     width: 24px;
   }

@@ -40,7 +40,7 @@ class BookListView extends LitElement {
           @bootom-logout=${this.bottonLogout}
         ></header-component>
         <div>
-          <search-component></search-component>
+          <search-component .item=${this.data}></search-component>
           <div class="container-book-list">
             ${this.data.map(
               (item) =>
